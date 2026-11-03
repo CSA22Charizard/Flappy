@@ -98,6 +98,9 @@
 
   // iOS only allows audio to start from touchend or click, not from the touch that begins a tap.
   for (const type of ['touchend', 'click']) document.addEventListener(type, wakeAudio, { passive: true });
+  const cancelTouch = (event) => event.preventDefault();
+  if (labParams.has('noclick') || labParams.has('nogesture')) element('stage').addEventListener('touchend', cancelTouch, { passive: false });
+  if (labParams.has('nogesture')) element('stage').addEventListener('touchstart', cancelTouch, { passive: false });
 
   class Flight extends Phaser.Scene {
     constructor() { super('Flight'); }

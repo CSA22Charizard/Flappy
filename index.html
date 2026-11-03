@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf5ef">
+  <title>Flappy Bird - Nog eentje.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='5' y='9' width='28' height='24' rx='9' fill='%23ffc94a'/%3E%3Crect x='25' y='13' width='5' height='6' fill='%23223932'/%3E%3Cpath d='M29 22h11v6H29' fill='%23ef7654'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="phaser.min.js"></script>
+  <script defer src="lucide.min.js"></script>
+  <script defer src="game.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <a class="brand" href="./index.html" aria-label="Flappy Bird startpagina"><span class="brand-mark"><i data-lucide="feather"></i></span> LITTLE ARCADE<span class="brand-dot">.</span></a>
+      <span class="edition">NO. 001 <span>/</span> DE ORIGINELE UITDAGING</span>
+    </header>
+    <section class="game-heading" aria-labelledby="title">
+      <div><div class="eyebrow">EEN KLEIN SPEL. NOG EEN POGING.</div><h1 id="title">Flappy Bird<span>.</span></h1></div>
+      <div class="record"><i data-lucide="trophy"></i><div><span>PERSOONLIJK RECORD</span><strong id="best">00</strong></div></div>
+    </section>
+    <section class="game-frame" aria-label="Flappy Bird spel">
+      <div id="stage" tabindex="0" aria-label="Speelveld. Gebruik spatie, pijltje omhoog of tik om te vliegen."></div>
+      <div class="game-hud" aria-hidden="true"><span>SCORE</span><strong id="score">0</strong></div>
+      <div class="scene-label"><span></span> ZONNIG VLIEGWEER</div>
+      <div id="overlay" class="overlay">
+        <div class="overlay-content">
+          <div id="overlay-tag" class="overlay-tag">KLAAR VOOR DE START?</div>
+          <h2 id="overlay-title">Vleugels uit.<br>Daar gaan we.</h2>
+          <div id="result" class="result" hidden><span>Score <strong id="final-score">0</strong></span><span>Best <strong id="final-best">0</strong></span></div>
+          <ul id="medals" class="medals" aria-label="Hoogste medaille van deze ronde" hidden></ul>
+          <button id="start" class="primary"><i data-lucide="play"></i><span>Spelen</span></button>
+        </div>
+      </div>
+      <div id="load-error" class="load-error" hidden>Het spel kon niet worden geladen. Controleer of phaser.min.js naast index.html staat en vernieuw de pagina.</div>
+    </section>
+    <footer class="game-toolbar">
+      <div class="session-label"><span class="status-dot"></span><span id="status">Klaar voor vertrek</span></div>
+      <div class="tools">
+        <button id="pause" class="icon-button" title="Pauzeren (P)" aria-label="Pauzeren" disabled><i data-lucide="pause"></i></button>
+        <button id="restart" class="icon-button" title="Opnieuw spelen" aria-label="Opnieuw spelen"><i data-lucide="rotate-ccw"></i></button>
+        <span class="tool-divider"></span>
+        <button id="sound" class="icon-button" title="Geluid uitschakelen" aria-label="Geluid uitschakelen" aria-pressed="true"><i data-lucide="volume-2"></i></button>
+      </div>
+    </footer>
+    <div class="bottom-line"><span>GEMAAKT VOOR JE VOLGENDE RECORD.</span><span>Veel vliegplezier <i data-lucide="sparkles"></i></span></div>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>

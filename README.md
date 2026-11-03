@@ -1,5 +1,5 @@
 # Flappy Bird
-
+Speel online: https://csa22charizard.github.io/Flappy/
 Open `index.html` in een moderne browser. Geen installatie, buildstap of internet nodig: Phaser en Lucide zijn lokaal meegeleverd.
 
 ## Spelen
